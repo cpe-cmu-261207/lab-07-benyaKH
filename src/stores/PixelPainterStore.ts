@@ -2,7 +2,8 @@ import {Store} from 'pullstate'
 
 type PixelPainterStoreType = {
   //we save painted color as hex code (string) in 2D array
-  canvas: string[][] 
+  canvas: string[][] ;
+  selectedcolor: string ;
 }
 
 //return an (16 x 16) 2D array filled with "#FFFFFF"
@@ -18,5 +19,6 @@ const createEmptyCanvas = () => {
 }
 
 export const PixelPainterStore = new Store<PixelPainterStoreType>({
-  canvas: createEmptyCanvas()
+  canvas: createEmptyCanvas(),
+  selectedcolor: "#000000",
 })
