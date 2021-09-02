@@ -1,4 +1,4 @@
-import { createEmptyCanvas ,PixelPainterStore } from "../stores/PixelPainterStore"
+import { createRandomCanvas,createEmptyCanvas ,PixelPainterStore } from "../stores/PixelPainterStore"
 
 const Utility = () => {
   const state = PixelPainterStore.useState()
@@ -7,7 +7,9 @@ const Utility = () => {
       <button className="w-36"
       onClick={() => PixelPainterStore.update(state => {state.canvas = createEmptyCanvas()})}>
         Clear</button>
-      <button className="w-36">Random color</button>
+      <button className="w-36"
+      onClick={() => PixelPainterStore.update(state => {state.canvas = createRandomCanvas()})}>
+        Random color</button>
     </div>
   )
 }
