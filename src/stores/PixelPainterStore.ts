@@ -7,7 +7,7 @@ type PixelPainterStoreType = {
 }
 
 //return an (16 x 16) 2D array filled with "#FFFFFF"
-const createEmptyCanvas = () => {
+export const createEmptyCanvas = () => {
   const output: string[][] = []
   for (let i=0; i<16; i++){
     output[i] = []
